@@ -1,8 +1,7 @@
 import React from "react";
-import { Row, Col, Card, Table, Tabs, Tab } from "react-bootstrap";
+import { Row, Col, Card, Table } from "react-bootstrap";
 
 import Aux from "../../hoc/_Aux";
-import DEMO from "../../store/constant";
 import PieDonutChart from "../Charts/Nvd3Chart/PieDonutChart";
 
 import avatar1 from "../../assets/images/user/avatar-1.jpg";
@@ -11,125 +10,6 @@ import avatar3 from "../../assets/images/user/avatar-3.jpg";
 
 class Dashboard extends React.Component {
   render() {
-    const tabContent = (
-      <Aux>
-        <div className="media friendlist-box align-items-center justify-content-center m-b-20">
-          <div className="m-r-10 photo-table">
-            <a href={DEMO.BLANK_LINK}>
-              <img
-                className="rounded-circle"
-                style={{ width: "40px" }}
-                src={avatar1}
-                alt="activity-user"
-              />
-            </a>
-          </div>
-          <div className="media-body">
-            <h6 className="m-0 d-inline">Silje Larsen</h6>
-            <span className="float-right d-flex  align-items-center">
-              <i className="fa fa-caret-up f-22 m-r-10 text-c-green" />
-              3784
-            </span>
-          </div>
-        </div>
-        <div className="media friendlist-box align-items-center justify-content-center m-b-20">
-          <div className="m-r-10 photo-table">
-            <a href={DEMO.BLANK_LINK}>
-              <img
-                className="rounded-circle"
-                style={{ width: "40px" }}
-                src={avatar2}
-                alt="activity-user"
-              />
-            </a>
-          </div>
-          <div className="media-body">
-            <h6 className="m-0 d-inline">Julie Vad</h6>
-            <span className="float-right d-flex  align-items-center">
-              <i className="fa fa-caret-up f-22 m-r-10 text-c-green" />
-              3544
-            </span>
-          </div>
-        </div>
-        <div className="media friendlist-box align-items-center justify-content-center m-b-20">
-          <div className="m-r-10 photo-table">
-            <a href={DEMO.BLANK_LINK}>
-              <img
-                className="rounded-circle"
-                style={{ width: "40px" }}
-                src={avatar3}
-                alt="activity-user"
-              />
-            </a>
-          </div>
-          <div className="media-body">
-            <h6 className="m-0 d-inline">Storm Hanse</h6>
-            <span className="float-right d-flex  align-items-center">
-              <i className="fa fa-caret-down f-22 m-r-10 text-c-red" />
-              2739
-            </span>
-          </div>
-        </div>
-        <div className="media friendlist-box align-items-center justify-content-center m-b-20">
-          <div className="m-r-10 photo-table">
-            <a href={DEMO.BLANK_LINK}>
-              <img
-                className="rounded-circle"
-                style={{ width: "40px" }}
-                src={avatar1}
-                alt="activity-user"
-              />
-            </a>
-          </div>
-          <div className="media-body">
-            <h6 className="m-0 d-inline">Frida Thomse</h6>
-            <span className="float-right d-flex  align-items-center">
-              <i className="fa fa-caret-down f-22 m-r-10 text-c-red" />
-              1032
-            </span>
-          </div>
-        </div>
-        <div className="media friendlist-box align-items-center justify-content-center m-b-20">
-          <div className="m-r-10 photo-table">
-            <a href={DEMO.BLANK_LINK}>
-              <img
-                className="rounded-circle"
-                style={{ width: "40px" }}
-                src={avatar2}
-                alt="activity-user"
-              />
-            </a>
-          </div>
-          <div className="media-body">
-            <h6 className="m-0 d-inline">Silje Larsen</h6>
-            <span className="float-right d-flex  align-items-center">
-              <i className="fa fa-caret-up f-22 m-r-10 text-c-green" />
-              8750
-            </span>
-          </div>
-        </div>
-        <div className="media friendlist-box align-items-center justify-content-center">
-          <div className="m-r-10 photo-table">
-            <a href={DEMO.BLANK_LINK}>
-              <img
-                className="rounded-circle"
-                style={{ width: "40px" }}
-                src={avatar3}
-                alt="activity-user"
-              />
-            </a>
-          </div>
-          <div className="media-body">
-            <h6 className="m-0 d-inline">Storm Hanse</h6>
-            <span className="float-right d-flex  align-items-center">
-              <i className="fa fa-caret-down f-22 m-r-10 text-c-red" />
-              8750
-            </span>
-          </div>
-        </div>
-      </Aux>
-    );
-
     return (
       <Aux>
         <Row>
@@ -342,199 +222,6 @@ class Dashboard extends React.Component {
               </Card.Body>
             </Card>
           </Col>
-          {/* <Col md={6} xl={8}>
-            <Card className="Recent-Users">
-              <Card.Header>
-                <Card.Title as="h5">Recent Users</Card.Title>
-              </Card.Header>
-              <Card.Body className="px-0 py-2">
-                <Table responsive hover>
-                  <tbody>
-                    <tr className="unread">
-                      <td>
-                        <img
-                          className="rounded-circle"
-                          style={{ width: "40px" }}
-                          src={avatar1}
-                          alt="activity-user"
-                        />
-                      </td>
-                      <td>
-                        <h6 className="mb-1">Isabella Christensen</h6>
-                        <p className="m-0">
-                          Lorem Ipsum is simply dummy text of…
-                        </p>
-                      </td>
-                      <td>
-                        <h6 className="text-muted">
-                          <i className="fa fa-circle text-c-green f-10 m-r-15" />
-                          11 MAY 12:56
-                        </h6>
-                      </td>
-                      <td>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg2 text-white f-12"
-                        >
-                          Reject
-                        </a>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg text-white f-12"
-                        >
-                          Approve
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="unread">
-                      <td>
-                        <img
-                          className="rounded-circle"
-                          style={{ width: "40px" }}
-                          src={avatar2}
-                          alt="activity-user"
-                        />
-                      </td>
-                      <td>
-                        <h6 className="mb-1">Mathilde Andersen</h6>
-                        <p className="m-0">
-                          Lorem Ipsum is simply dummy text of…
-                        </p>
-                      </td>
-                      <td>
-                        <h6 className="text-muted">
-                          <i className="fa fa-circle text-c-red f-10 m-r-15" />
-                          11 MAY 10:35
-                        </h6>
-                      </td>
-                      <td>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg2 text-white f-12"
-                        >
-                          Reject
-                        </a>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg text-white f-12"
-                        >
-                          Approve
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="unread">
-                      <td>
-                        <img
-                          className="rounded-circle"
-                          style={{ width: "40px" }}
-                          src={avatar3}
-                          alt="activity-user"
-                        />
-                      </td>
-                      <td>
-                        <h6 className="mb-1">Karla Sorensen</h6>
-                        <p className="m-0">
-                          Lorem Ipsum is simply dummy text of…
-                        </p>
-                      </td>
-                      <td>
-                        <h6 className="text-muted">
-                          <i className="fa fa-circle text-c-green f-10 m-r-15" />
-                          9 MAY 17:38
-                        </h6>
-                      </td>
-                      <td>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg2 text-white f-12"
-                        >
-                          Reject
-                        </a>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg text-white f-12"
-                        >
-                          Approve
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="unread">
-                      <td>
-                        <img
-                          className="rounded-circle"
-                          style={{ width: "40px" }}
-                          src={avatar1}
-                          alt="activity-user"
-                        />
-                      </td>
-                      <td>
-                        <h6 className="mb-1">Ida Jorgensen</h6>
-                        <p className="m-0">
-                          Lorem Ipsum is simply dummy text of…
-                        </p>
-                      </td>
-                      <td>
-                        <h6 className="text-muted f-w-300">
-                          <i className="fa fa-circle text-c-red f-10 m-r-15" />
-                          19 MAY 12:56
-                        </h6>
-                      </td>
-                      <td>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg2 text-white f-12"
-                        >
-                          Reject
-                        </a>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg text-white f-12"
-                        >
-                          Approve
-                        </a>
-                      </td>
-                    </tr>
-                    <tr className="unread">
-                      <td>
-                        <img
-                          className="rounded-circle"
-                          style={{ width: "40px" }}
-                          src={avatar2}
-                          alt="activity-user"
-                        />
-                      </td>
-                      <td>
-                        <h6 className="mb-1">Albert Andersen</h6>
-                        <p className="m-0">
-                          Lorem Ipsum is simply dummy text of…
-                        </p>
-                      </td>
-                      <td>
-                        <h6 className="text-muted">
-                          <i className="fa fa-circle text-c-green f-10 m-r-15" />
-                          21 July 12:56
-                        </h6>
-                      </td>
-                      <td>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg2 text-white f-12"
-                        >
-                          Reject
-                        </a>
-                        <a
-                          href={DEMO.BLANK_LINK}
-                          className="label theme-bg text-white f-12"
-                        >
-                          Approve
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </Card.Body>
-            </Card>
-          </Col> */}
           <Col md={6} xl={6}>
             <Card className="card-event">
               <Card.Body>
@@ -740,7 +427,8 @@ class Dashboard extends React.Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={6} xl={6} className="m-b-30">
+          {/* NEWS WIDGET */}
+          <Col md={6} xl={8} className="m-b-30">
             <Card>
               <Card.Header className="bg-danger d-flex align-center">
                 <Card.Title as="h4" className="mb-0 p-0 text-white">
@@ -749,61 +437,57 @@ class Dashboard extends React.Component {
                 .{" "}
               </Card.Header>
               <Card.Body className="p-0">
-                <div className="py-2 d-flex justify-content-around border border-top-0 border-left-0 border-right-0 border-secondary">
+                <div className="py-1 d-flex justify-content-around border border-top-0 border-left-0 border-right-0 border-secondary">
+                  <div className="d-flex align-items-center">
                   <img
                     src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F61315165651c4e3e07871f72%2F0x0.jpg%3FcropX1%3D173%26cropX2%3D3278%26cropY1%3D461%26cropY2%3D2207"
-                    className="rounded mx-3"
+                    className="rounded mx-2"
                     alt="financial news"
-                    style={{ width: "80px", height: "80px" }}
+                    style={{ width: "90px", height: "80px" }}
                   />
-                  <h6>
+                  </div>
+                  <div>
+                  <h5>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Veniam consequuntur cumque praesentium quod, nisi voluptatum
-                    nulla deserunt! Voluptatum...
-                  </h6>
+                  </h5>
+                  <p className="mb-0">this is some sample article text, financial money tesla vision</p>
+                  </div>
                 </div>
-                <div className="py-2 d-flex justify-content-around border border-top-0 border-left-0 border-right-0 border-secondary">
+                <div className="py-1 d-flex justify-content-around border border-top-0 border-left-0 border-right-0 border-secondary">
+                  <div className="d-flex align-items-center">
                   <img
                     src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F61315165651c4e3e07871f72%2F0x0.jpg%3FcropX1%3D173%26cropX2%3D3278%26cropY1%3D461%26cropY2%3D2207"
-                    className="rounded mx-3"
+                    className="rounded mx-2"
                     alt="financial news"
-                    style={{ width: "80px", height: "80px" }}
+                    style={{ width: "90px", height: "80px" }}
                   />
-                  <h6>
+                  </div>
+                  <div>
+                  <h5>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Veniam consequuntur cumque praesentium quod, nisi voluptatum
-                    nulla deserunt! Voluptatum...
-                  </h6>
+                  </h5>
+                  <p className="mb-0">this is some sample article text, financial money tesla vision </p>
+                  </div>
                 </div>
-                <div className="py-2 d-flex justify-content-around border border-top-0 border-left-0 border-right-0 border-secondary">
+                <div className="py-1 d-flex justify-content-around border border-top-0 border-left-0 border-right-0 border-secondary">
+                  <div className="d-flex align-items-center">
                   <img
                     src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F61315165651c4e3e07871f72%2F0x0.jpg%3FcropX1%3D173%26cropX2%3D3278%26cropY1%3D461%26cropY2%3D2207"
-                    className="rounded mx-3"
+                    className="rounded mx-2"
                     alt="financial news"
-                    style={{ width: "80px", height: "80px" }}
+                    style={{ width: "90px", height: "80px" }}
                   />
-                  <h6>
+                  </div>
+                  <div>
+                  <h5>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Veniam consequuntur cumque praesentium quod, nisi voluptatum
-                    nulla deserunt! Voluptatum...
-                  </h6>
+                  </h5>
+                  <p className="mb-0">this is some sample article text, financial money tesla vision stocks bonds etc etc</p>
+                  </div>
                 </div>
               </Card.Body>
             </Card>
           </Col>
-          {/* <Col md={6} xl={8} className="m-b-30">
-            <Tabs defaultActiveKey="today" id="uncontrolled-tab-example">
-              <Tab eventKey="today" title="Today">
-                {tabContent}
-              </Tab>
-              <Tab eventKey="week" title="This Week">
-                {tabContent}
-              </Tab>
-              <Tab eventKey="all" title="All">
-                {tabContent}
-              </Tab>
-            </Tabs>
-          </Col> */}
         </Row>
       </Aux>
     );

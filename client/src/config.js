@@ -1,6 +1,6 @@
 export default {
     defaultPath: '/dashboard/default',
-    basename: '/datta-able/react/default', // only at build time to set, like /datta-able
+    basename: '/datta-able/react/default', // only at build time to set
     layout: 'vertical', // vertical
     collapseMenu: false, // mini-menu
     layoutType: 'menu-light', // menu-dark
