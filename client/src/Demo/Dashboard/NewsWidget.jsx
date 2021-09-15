@@ -30,7 +30,7 @@ export const NewsWidget = () => {
         </Card.Header>
         <Card.Body className="p-0">
           {newsArticles.length > 0 ? (
-            newsArticles.slice(0, 3).map((article, index) => {
+            newsArticles.map((article, index) => {
               return (
                 <a
                   key={index}
@@ -39,15 +39,15 @@ export const NewsWidget = () => {
                   rel="noopener noreferrer"
                 >
                   <div className="py-1 d-flex justify-content-around border border-top-0 border-left-0 border-right-0 border-secondary">
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center col">
                       <img
                         src={article.urlToImage}
                         className="rounded mx-2"
                         alt="not available"
-                        style={{ width: "90px", height: "80px" }}
+                        style={{ width: "inherit", height: "inherit" }}
                       />
                     </div>
-                    <div>
+                    <div className="col-8">
                       <h5>{article.title}</h5>
                       <p className="mb-0 text-dark">
                         {article.description.substring(0, 100)}...
